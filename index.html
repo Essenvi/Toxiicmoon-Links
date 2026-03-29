@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toxiicmoon - Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: radial-gradient(circle at center, #2e004f 0%, #000000 100%);
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .name, .logo-name, .platform-name, .header p {
+            font-family: 'Great Vibes', cursive;
+            letter-spacing: 1px;
+        }
+        
+        .header {
+            position: relative;
+            height: 200px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), 
+                        url('https://i.postimg.cc/50LfYJ6Q/IMG_20260326_WA0179.jpg');
+            background-size: cover;
+            background-position: center 1%;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            margin-bottom: 40px;
+        }
+        
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #8a2be2;
+            box-shadow: 0 8px 25px rgba(138,43,226,0.3);
+        }
+        
+        .name {
+            font-size: 3em;
+            font-weight: bold;
+            color: #e0b0ff;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        
+        .top-logos {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+        
+        .logo-item {
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .logo-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(138,43,226,0.15);
+            border-radius: 15px;
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6em;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            border: 1px solid rgba(138,43,226,0.3);
+        }
+        
+        .logo-icon img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+        
+        .logo-name {
+            font-size: 1.2em;
+            color: #e0b0ff;
+            padding: 4px 12px;
+            background: rgba(138,43,226,0.1);
+            border-radius: 20px;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px 50px;
+        }
+        
+        .photo-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(138,43,226,0.2);
+        }
+        
+        .photo-card:hover {
+            transform: translateY(-10px);
+            background: rgba(138,43,226,0.08);
+        }
+        
+        .photo-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .photo-logo {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .photo-logo i { color: #2e004f; font-size: 1.2em; }
+        .photo-logo img { width: 25px; height: 25px; }
+        
+        .platform-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            text-align: center;
+            color: #e0b0ff;
+            font-size: 1.8em;
+            background: rgba(20, 0, 40, 0.85);
+            border-top: 1px solid rgba(138,43,226,0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .gallery { grid-template-columns: 1fr; }
+            .name { font-size: 2.2em; }
+        }
+    /* Isso cria a animação chamada 'pulsoRoxo' */
+@keyframes pulsoRoxo {
+    0% {
+        /* Estado inicial: borda normal e sem sombra */
+        border-color: rgba(138, 43, 226, 0.2);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    50% {
+        /* Estado meio: borda acesa e sombra brilhante */
+        border-color: #a020f0; /* Um roxo mais claro */
+        box-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2; /* Brilho neon */
+    }
+    100% {
+        /* Estado final: volta ao normal */
+        border-color: rgba(138, 43, 226, 0.2);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+}
+
+/* Isso aplica a animação a qualquer coisa com a classe 'piscando' */
+.piscando {
+    /* Nome da animação, duração (1.5 segundos), modo (infinito) */
+    animation: pulsoRoxo 1.5s infinite;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="profile-container">
+            <img src="https://i.postimg.cc/B6HJL3XB/IMG_20260327_WA0283.jpg" class="profile-pic">
+            <div class="name">toxiicmoon</div>
+        </div>
+    </div>
+    
+    <div class="top-logos">
+        <div class="logo-item" onclick="window.open('LINK_PRIVACY', '_blank')"><div class="logo-icon"><img src="https://i.imgur.com/3eyn7gr.png"></div><div class="logo-name">Privacy</div></div>
+        <div class="logo-item" onclick="window.open('LINK_AMAZON', '_blank')"><div class="logo-icon"><i class= "fab fa-amazon" style="color: #FF9900;"></i></div><div class="logo-name">Wishlist</div></div>
+        <div class="logo-item" onclick="window.open('LINK_TWITCH', '_blank')"><div class="logo-icon"><i class="fab fa-twitch" style="color: #9146FF;"></i></div><div class="logo-name">Twitch</div></div>
+        <div class="logo-item" onclick="window.open('LINK_TWITTER', '_blank')"><div class="logo-icon"><img src="https://i.postimg.cc/htrBpr3k/novo-logotipo-do-twitter-x-2023-download-do-vetor-do-logotipo-do-twitter-x-691560-10808.jpg" style="color: #1DA1F2;"></i></div><div class="logo-name">Twitter/X</div></div>
+        <div class="logo-item" onclick="window.open('LINK_INSTAGRAM', '_blank')"><div class="logo-icon"><i class="fab fa-instagram" style="color: #E1306C;"></i></div><div class="logo-name">Insta</div></div>
+        <div class="logo-item" onclick="window.open('LINK_INSTA_PRIVADO', '_blank')"><div class="logo-icon"><i class="fab fa-instagram" style="color: #E1306C;"></i></div><div class="logo-name">Insta Pv</div></div>
+        <div class="logo-item" onclick="window.open('LINK_TIKTOK', '_blank')"><div class="logo-icon"><i class="fab fa-tiktok" style="color: #fff;"></i></div><div class="logo-name">TikTok</div></div>
+        <div class="logo-item" onclick="window.open('LINK_TIKTOK', '_blank')"><div class="logo-icon"><i class="fab fa-telegram" style="color: #0088CC;"></i></div><div class="logo-name">Telegram</div></div>
+    </div>
+
+    <div class="gallery">
+        <div class="photo-card piscando"><div class="photo-container"><a href="https://privacy.com.br/Profile/toxiicmoon" target="_blank"><img src="https://i.postimg.cc/rmxq0TK1/IMG_20260327_WA0284.jpg"></a><div class="photo-logo"><img src="https://i.imgur.com/3eyn7gr.png"></div><div class="platform-name">Privacy</div></div></div>
+        <div class="photo-card"><div class="photo-container"><a href="https://www.amazon.com.br/hz/wishlist/ls/KF2LEYP8MA99?ref_=wl_share" target="_blank"><img src="https://i.postimg.cc/d1rJkFL8/IMG_20260326_WA0183.jpg"></a><div class="photo-logo"><i class="fab fa-amazon" style="color: #FF9900;"></i></div><div class="platform-name">Wishlist</div></div></div>
+        <div class="photo-card"><div class="photo-container"><a href="https://www.twitch.tv/toxiicmoon" target="_blank"><img src="https://i.postimg.cc/RFKv6mNt/IMG_20260326_WA0184.jpg"></a><div class="photo-logo"><i class="fab fa-twitch" style="color: #9146FF;"></i></div><div class="platform-name">Twitch</div></div></div>
+        <div class="photo-card"><div class="photo-container"><a href="https://t.me/AhriAdmnistradoraBot" target="_blank"><img src="https://i.postimg.cc/Y9YtG7hg/IMG_20260326_WA0182.jpg"></a><div class="photo-logo"><i class="fab fa-telegram" style="color: #0088CC;"></i></div><div class="platform-name">Telegram</div></div></div>
+        <div class="photo-card"><div class="photo-container"><a href="https://x.com/toxiicyone" target="_blank"><img src="https://i.postimg.cc/RFKv6mNG/IMG_20260328_WA0109.jpg"></a><div class="photo-logo"><img src="https://i.postimg.cc/htrBpr3k/novo-logotipo-do-twitter-x-2023-download-do-vetor-do-logotipo-do-twitter-x-691560-10808.jpg" style="color: #1DA1F2;"></i></div><div class="platform-name">Twiiter/X</div></div></div>
+        <div class="photo-card"><div class="photo-container"><a href="https://www.instagram.com/toxiicmoon?igsh=aHdma3locmU4eHhj" target="_blank"><img src="https://i.postimg.cc/ZRpJBmCH/IMG_20260327_WA0285.jpg"></a><div class="photo-logo"><i class="fab fa-instagram" style="color: #E1306C;"></i></div><div class="platform-name">Instagram</div></div></div>
+        <div class="photo-card"><div class="photo-container"><a href="https://www.instagram.com/moontoxiiii?igsh=MXBlOWx0b3BpNTYxNw==" target="_blank"><img src="https://i.postimg.cc/3Rm34hdm/IMG_20260326_WA0185.jpg"></a><div class="photo-logo"><i class="fab fa-instagram" style="color: #E1306C;"></i></div><div class="platform-name">Instagram Privado</div></div></div>
+        <div class="photo-card"><div class="photo-container"><a href="https://www.tiktok.com/@toxiicmoonlol" target="_blank"><img src="https://i.postimg.cc/tTW9ZbYB/IMG_20260328_WA0110.jpg"></a><div class="photo-logo"><i class="fab fa-tiktok"></i></div><div class="platform-name">TikTok</div></div></div>
+        <div class="photo-card"><div class="photo-container"><a href="https://wa.me/5548996051791" target="_blank"><img src="https://i.postimg.cc/26hCbYVw/IMG_20260328_WA0108.jpg"></a><div class="photo-logo"><i class="fab fa-whatsapp" style="color: #90EE90"></i></div><div class="platform-name">Me contrate para ser seu duo no LOL</div></div></div>
+
+    </div>
+</body>
+</html>
